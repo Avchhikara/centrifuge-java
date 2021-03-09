@@ -25,7 +25,7 @@ public class StorageService {
     }
 
     public String saveFile(MultipartFile file) throws IOException {
-        String newFileName = java.util.UUID.randomUUID().toString() + ".png";
+        String newFileName = java.util.UUID.randomUUID().toString() + ".jpg";
         File newFile = new File(uploadDir + "/" + newFileName);
         file.transferTo(newFile);
         return newFileName;
